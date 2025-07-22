@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>You’re Special 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+      max-width: 300px;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff0066;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onclick="showMessage()">
+    💌 Tap Me for Something Beautiful 💌
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const messages = [
+      "You are loved more than you realize 💖",
+      "Your kindness is your superpower 🌟",
+      "To the world, you may be one person, but to someone, you are everything 🌍",
+      "You light up lives just by being in them ☀️",
+      "You’re a blessing, a masterpiece, a miracle ✨",
+      "Strong, smart, and full of soul — that’s you 🦋",
+      "You carry grace, even when you don’t notice it 🌸",
+      "For the man or woman reading this: you are enough, always 💪💗",
+      "Your presence brings peace — never doubt that 🕊️",
+      "You are exactly what someone prays for every night 🙏"
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
